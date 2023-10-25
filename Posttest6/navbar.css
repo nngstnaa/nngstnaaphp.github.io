@@ -1,0 +1,104 @@
+
+  
+
+  
+body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(174, 209, 226, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  /* on small screen use smaller logo */
+  .navbar .navbar-logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  /* on small screen hide navbar-nav */
+  .navbar .navbar-nav {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar .navbar-logo {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: white;
+    }
+  
+    .navbar .navbar-nav {
+      display: flex;
+    }
+  }
+  
+  .navbar .navbar-nav a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+  }
+  
+  .navbar .navbar-nav a:hover {
+    color: var(--dasar);
+  }
+  
+  .navbar-extra .dark-light {
+    display: flex;
+    color: rgb(3, 3, 3);
+    margin: 0 0.5rem;
+    align-items: center;
+  }
+  
+  .navbar-extra .dark-light {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+  }
+  
+  .dark-light i {
+    position: absolute;
+    color: black; 
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+  
+  .dark-light i.sun {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .dark-light.active i.sun {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .dark-light.active i.moon {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .navbar .navbar-extra a:hover {
+    color: var(--dasar);
+  }
